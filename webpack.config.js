@@ -3,11 +3,12 @@ const CopyPlugin = require("copy-webpack-plugin");
 const autoprefixer = require('autoprefixer');
 const HtmlBundlerPlugin = require('html-bundler-webpack-plugin');
 const webpack = require('webpack');
+const page = require('./resources/views/pages/page.manifest');
 module.exports = {
   output: {
     path: path.resolve(__dirname, 'public'),
     clean: true,
-    filename: 'index.jing',
+    filename: '[name].[contenthash:8].js',
   },
 
   plugins: [
@@ -24,10 +25,11 @@ module.exports = {
       'window.jQuery':'jquery',
     }),
     new HtmlBundlerPlugin({
-      entry: {
-        // define templates here
-        index: 'resources/views/index.pug',
-      },
+      entry:page.manifest,
+      // entry: {
+      //   // define templates here
+      //   index: 'resources/views/index.pug',
+      // },
       js: {
         // output filename of compiled JavaScript
         filename: 'js/[name].[contenthash:8].js',
