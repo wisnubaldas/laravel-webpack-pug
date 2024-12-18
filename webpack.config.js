@@ -5,7 +5,7 @@ const HtmlBundlerPlugin = require('html-bundler-webpack-plugin');
 const webpack = require('webpack');
 module.exports = {
   output: {
-    path: path.resolve(__dirname, 'public/build'),
+    path: path.resolve(__dirname, 'public'),
     clean: true,
     filename: 'index.jing',
   },
@@ -14,6 +14,7 @@ module.exports = {
     new CopyPlugin({
       patterns: [
         { from: "resources/assets/img/corporate", to: "img/corporate" },
+        { from: "resources/assets/laravel", to: "./" },
       ],
     }),
     new webpack.ProvidePlugin({
@@ -91,9 +92,12 @@ module.exports = {
   },
   // enable live reload
   devServer: {
-    static: path.resolve(__dirname, 'dist'),
+    static: path.resolve(__dirname, 'public/build'),
+    open: true,
+    hot: true,
+    compress: true,
     watchFiles: {
-      paths: ['src/**/*.*'],
+      paths: ['public/**/*.*'],
       options: {
         usePolling: true,
       },

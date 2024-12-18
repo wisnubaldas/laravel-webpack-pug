@@ -10,6 +10,7 @@ html(lang='en')
         link(rel="stylesheet", href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700")
         link(rel="stylesheet", href="@css/corporate/vendor.css")
         link(rel="stylesheet", href="@css/corporate/app.min.css")
+        block css
     body
         #page-loader.fade.show
             span.spinner
@@ -19,202 +20,29 @@ html(lang='en')
                     .header-logo
                         a.logo-link(href='index.html')
                             span.logo
-                            b ColorAdmin
+                            b ColorBapa
                             |  
                             small CORPORATE
                     .header-nav
                         .container
                             .header-nav-item
-                                a.header-nav-link(href='about.html') Who We Are
+                                a.header-nav-link(href='/siapa-kami') Who We Are
                             .header-nav-item
-                                a.header-nav-link(href='products.html') Our Products
+                                a.header-nav-link(href='#') Our Products
                             .header-nav-item
-                                a.header-nav-link(href='newsroom.html') Newsroom
+                                a.header-nav-link(href='#') Newsroom
                             .header-nav-item
-                                a.header-nav-link(href='careers.html') Our Careers
+                                a.header-nav-link(href='#') Our Careers
                             .header-nav-item
-                                a.header-nav-link(href='contact_us.html') Contact Us
+                                a.header-nav-link(href='#') Contact Us
                     .header-btn
                         a.btn.btn-primary.fw-bold.rounded-pill(href='#')
                             | Get started 
                             i.fa.fa-arrow-right.ms-1.opacity-5
                     button.header-mobile-nav-toggler(type='button', data-toggle='header-mobile-nav')
                         span.header-mobile-nav-toggler-icon
-            .section.section-hero
-                .section-bg.with-cover(style='background-image: url(/app/img/corporate/img-1.jpg);')
-                .section-bg.bg-gray-800-transparent-5
-                .container.position-relative
-                    .section-hero-content
-                        .row
-                            .col-lg-8.col-lg-10
-                                h1.hero-title.mb-3.mt-5.pt-md-5
-                                    | Built with Color Admin
-                                .fs-18px.text-white-transparent-8
-                                    | Thousands of people around the world use Color Admin to start their own startup, company project, learn creative skills or even for freelancing task.
-                                .row.text-white.mt-4.mb-5.pb-5
-                                    .col-lg-4.mb-3.mb-lg-0
-                                        .d-flex.align-items-center
-                                            .h1.text-white-transparent-3.me-3
-                                                i.bi.bi-download
-                                            div
-                                                .fw-bold.mb-1.h3 9k+
-                                                .fw-bold.text-white-transparent-8 Downloads / Purchases
-                                    .col-lg-4
-                                        .d-flex.align-items-center
-                                            .h1.text-white-transparent-3.me-3
-                                                i.bi.bi-bootstrap
-                                            div
-                                                .fw-bold.mb-1.h3 5.0
-                                                .fw-bold.text-white-transparent-8 Bootstrap Version
-                                a.hero-btn.fw-bold.mb-n5(href='#')
-                                    i.fa.fa-arrow-right 
-                                    |Learn About Our Company
-            .section
-                .container
-                    .pt-lg-5.pb-lg-3.text-center
-                        .display-6.fw-bolder.mb-3.d-flex.align-items-center.justify-content-center
-                            | Our missions
-                        p.fs-18px.mb-5
-                            | We build technologies that help people create their own applications, 
-                            span.d-none.d-lg-inline
-                            br
-                            | speed up development speed, save times and grow their businesses.
-                        .mb-2.fw-bold.text-gray-500 built on top of
-                        .text-gray-500.text-center.mb-5
-                            i.fab.fa-bootstrap.fa-2x.fa-fw
-                            i.fab.fa-node-js.fa-2x.fa-fw
-                            i.fab.fa-vuejs.fa-2x.fa-fw
-                            i.fab.fa-angular.fa-2x.fa-fw
-                            i.fab.fa-react.fa-2x.fa-fw
-                    h4.section-subtitle Top Stories
-                    .row.gx-lg-5
-                        .col-lg-4
-                            .news
-                                .news-media
-                                    .news-media-img(style='background-image: url(/app/img/corporate/img-2.jpg);')
-                                    .news-content
-                                        .news-label
-                                            span Web Development
-                                        h2.news-title Accelerate development without extra added costs
-                                        p.news-date December 9, 2021
-                            .news
-                                .news-media
-                                    .news-media-img(style='background-image: url(/app/img/corporate/img-3.jpg);')
-                                    .news-content
-                                        .news-label
-                                            span.bg-indigo-200.text-indigo-800 Native Apps
-                                        h2.news-title Multiple frontend framework fit your needs
-                                        p.news-date December 10, 2021
-                        .col-lg-8
-                            .news
-                                .news-media
-                                .news-media-img.news-media-img-lg(style='background-image: url(/app/img/corporate/img-4.jpg);')
-                                .news-content
-                                    .news-label
-                                        span.bg-primary-200.text-primary-800 SEO Ranking
-                                    h2.news-title Boost your web traffic with smart routing and seo optimised html code.
-                                    p.news-date December 20, 2021
-            .section.bg-light
-                .container
-                    .row.align-items-center
-                        .col-lg-6.pe-lg-4.mb-5.mb-lg-0
-                            .section-subtitle Our Platform
-                            .section-title Stunning cross-platform template
-                            .section-desc
-                                | Our suite of developer-friendly products and services help you build, secure, and deliver enterprise-grade apps in less time &mdash; for any platform.
-                            a.section-btn(href='#')
-                                i.fa.fa-arrow-right
-                                |  Learn More
-                        .col-lg-6.ps-lg-4
-                            .section-media
-                                img.mw-100(src='/app/img/corporate/img-5.jpg', alt='')
-            .section
-                .container
-                    .section-subtitle Our Company
-                    .row.gx-5.mb-5
-                        .col-lg-6
-                            .news.rounded-3.overflow-hidden.shadow-lg.mb-5.mb-lg-0
-                                .news-media.mb-0
-                                    .news-media-img(style='background-image:url(/app/img/corporate/img-6.jpg);')
-                                .news-content.px-4.py-4
-                                    .news-label
-                                        span.bg-teal-200.text-teal-800 Development process
-                                    .news-title Our mission is building the system can integrate with any environment.
-                                    .news-date September 16, 2021
-                                    a.stretched-link(href='#')
-                        .col-lg-6
-                            .row.h-100
-                                .col-lg-12.h-50.mb-5.mb-lg-0.pb-lg-3
-                                    .news.rounded-3.overflow-hidden.shadow-lg.d-flex.h-100.mb-0
-                                        .news-content.w-50.p-4.d-flex.align-items-center
-                                            div
-                                                .news-label
-                                                    span.bg-warning-200.text-warning-800 Grand opening
-                                                .news-title Opening an Office in Lagos, Nigeria
-                                                .news-date September 18, 2021
-                                        .news-media.w-50.h-100.mb-0
-                                            .news-media-img.h-100.pt-0(style='background-image:url(/app/img/corporate/img-7.jpg);')
-                                    a.stretched-link(href='#')
-                                .col-lg-12.h-50.mb-5.mb-lg-0.pt-lg-3
-                                    .news.rounded-3.overflow-hidden.shadow-lg.d-flex.h-100.mb-0
-                                        .news-media.w-50.mb-0
-                                            .news-media-img.h-100.pt-0(style='background-image:url(/app/img/corporate/img-8.jpg);')
-                                        .news-content.w-50.p-4.d-flex.align-items-center
-                                            div
-                                                .news-label
-                                                    span.bg-primary-200.text-primary-800 Conference
-                                                .news-title Global Tech Speaking with Asian Branch
-                                                .news-date May 27, 2021
-                                    a.stretched-link(href='#')
-                    .text-center.pt-5.pt-lg-0
-                        a.section-btn(href='#')
-                            i.fa.fa-arrow-right
-                            |  See More Company Stories
-            .section
-                .container
-                    .section-subtitle Recent News
-                    .row
-                        .col-lg-3
-                            .news
-                                .news-media
-                                    .news-media-img.news-media-img-lg(style='background-image: url(/app/img/corporate/img-9.jpg);')
-                                .news-content
-                                    .news-label
-                                        span.bg-aqua-200.text-aqua-800 Twitter
-                                    .news-title Flexible deployment options for every scenario.
-                                    .news-date September 14, 2020
-                                        a.stretched-link(href='#')
-                        .col-lg-3
-                            .news
-                                .news-media
-                                    .news-media-img.news-media-img-lg(style='background-image: url(/app/img/corporate/img-10.jpg);')
-                                .news-content
-                                    .news-label
-                                        span.bg-pink-200.text-pink-800 BBC News
-                                    .news-title Supervision for corporate&#x2011;owned devices.
-                                    .news-date September 15, 2020
-                        .col-lg-3
-                            .news
-                                .news-media
-                                    .news-media-img.news-media-img-lg(style='background-image: url(/app/img/corporate/img-11.jpg);')
-                                .news-content
-                                .news-label
-                                    span.bg-primary-200.text-primary-800 Facebook
-                                .news-title Networking, Security and Server Collaboration
-                                .news-date September 16, 2020
-                        .col-lg-3
-                            .news
-                                .news-media
-                                    .news-media-img.news-media-img-lg(style='background-image: url(/app/img/corporate/img-12.jpg);')
-                                .news-content
-                                    .news-label
-                                        span.bg-indigo-200.text-indigo-800 Cisco News
-                                .news-title Cisco provides leading networking and security solutions&#x3002;
-                                .news-date September 20, 2020
-                    .text-center
-                        a.section-btn(href='#')
-                            i.fa.fa-arrow-right
-                            |  See More News
+            #content 
+                block content
             .footer
                 .container
                     .row.gx-5
@@ -312,4 +140,5 @@ html(lang='en')
                                 a.footer-copyright-link(href='#') Sitemap
 
         script(src="@js/corporate/vendor.min.js") 
-        script(src="@js/corporate/app.min.js") 
+        script(src="@js/corporate/app.min.js")
+        block js
