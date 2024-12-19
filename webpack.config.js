@@ -25,7 +25,7 @@ module.exports = {
       'window.jQuery':'jquery',
     }),
     new HtmlBundlerPlugin({
-      entry:page.manifest,
+      entry:page,
       // entry: {
       //   // define templates here
       //   index: 'resources/views/index.pug',
